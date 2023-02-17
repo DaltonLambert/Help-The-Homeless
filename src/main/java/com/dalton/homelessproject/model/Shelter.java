@@ -1,32 +1,34 @@
 package com.dalton.homelessproject.model;
 
-public class shelter {
+public class Shelter {
 
-    private int id;
+
+
+    private int shelterId;
     private String shelterName;
     private String shelterAddress;
     private String shelterCapacity;
     private String shelterPhone;
-    private String email;
+    private String shelterEmail;
 
-    public shelter() {
+    public Shelter() {
 
     }
 
-    public shelter(int id, String shelterName, String shelterAddress, String shelterCapacity, String shelterPhone, String email) {
-        this.id = id;
+    public Shelter(int shelterId, String shelterName, String shelterAddress, String shelterCapacity, String shelterPhone, String shelterEmail) {
+        this.shelterId = shelterId;
         this.shelterName = shelterName;
         this.shelterAddress = shelterAddress;
         this.shelterCapacity = shelterCapacity;
         this.shelterPhone = shelterPhone;
-        this.email = email;
+        this.shelterEmail = shelterEmail;
     }
-    public int getId() {
-        return id;
+    public int getShelterId() {
+        return shelterId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setShelterId(int shelterId) {
+        this.shelterId = shelterId;
     }
 
     public String getShelterName() {
@@ -61,12 +63,24 @@ public class shelter {
         this.shelterPhone = shelterPhone;
     }
 
-    public String getEmail() {
-        return email;
+    public String getShelterEmail() {
+        return shelterEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setShelterEmail(String email) {
+        this.shelterEmail = shelterEmail;
+    }
+
+    @Override
+    public String toString() {
+        return "Shelter{" +
+                "shelterId=" + shelterId +
+                ", shelterName='" + shelterName + '\'' +
+                ", shelterAddress='" + shelterAddress + '\'' +
+                ", shelterCapacity='" + shelterCapacity + '\'' +
+                ", shelterPhone='" + shelterPhone + '\'' +
+                ", shelterEmail='" + shelterEmail + '\'' +
+                '}';
     }
 
 
