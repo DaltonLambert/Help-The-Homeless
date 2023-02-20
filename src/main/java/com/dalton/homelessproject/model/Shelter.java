@@ -1,9 +1,6 @@
 package com.dalton.homelessproject.model;
 
 public class Shelter {
-
-
-
     private int shelterId;
     private String shelterName;
     private String shelterAddress;
@@ -14,7 +11,6 @@ public class Shelter {
     public Shelter() {
 
     }
-
     public Shelter(int shelterId, String shelterName, String shelterAddress, String shelterCapacity, String shelterPhone, String shelterEmail) {
         this.shelterId = shelterId;
         this.shelterName = shelterName;
@@ -70,7 +66,6 @@ public class Shelter {
     public void setShelterEmail(String email) {
         this.shelterEmail = shelterEmail;
     }
-
     @Override
     public String toString() {
         return "Shelter{" +

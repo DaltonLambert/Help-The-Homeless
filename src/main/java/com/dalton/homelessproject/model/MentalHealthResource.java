@@ -1,7 +1,6 @@
 package com.dalton.homelessproject.model;
 
 public class MentalHealthResource {
-
     private int healthId;
     private String healthName;
     private String healthAddress;
