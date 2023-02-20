@@ -10,4 +10,6 @@ public interface ShelterDao {
 
     Shelter getShelterByName(String shelterName);
 
+    Shelter createNewShelter(Shelter shelter);
+
 }

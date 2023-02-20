@@ -11,13 +11,12 @@ public class Shelter {
     public Shelter() {
 
     }
-    public Shelter(int shelterId, String shelterName, String shelterAddress, int shelterCapacity, String shelterPhone, String shelterEmail) {
+    public Shelter(int shelterId, String shelterName, String shelterAddress, int shelterCapacity, String shelterPhone) {
         this.shelterId = shelterId;
         this.shelterName = shelterName;
         this.shelterAddress = shelterAddress;
         this.shelterCapacity = shelterCapacity;
         this.shelterPhone = shelterPhone;
-        this.shelterEmail = shelterEmail;
     }
     public int getShelterId() {
         return shelterId;
@@ -59,13 +58,7 @@ public class Shelter {
         this.shelterPhone = shelterPhone;
     }
 
-    public String getShelterEmail() {
-        return shelterEmail;
-    }
 
-    public void setShelterEmail(String email) {
-        this.shelterEmail = shelterEmail;
-    }
     @Override
     public String toString() {
         return "Shelter{" +
@@ -74,7 +67,6 @@ public class Shelter {
                 ", shelterAddress='" + shelterAddress + '\'' +
                 ", shelterCapacity='" + shelterCapacity + '\'' +
                 ", shelterPhone='" + shelterPhone + '\'' +
-                ", shelterEmail='" + shelterEmail + '\'' +
                 '}';
     }
 
