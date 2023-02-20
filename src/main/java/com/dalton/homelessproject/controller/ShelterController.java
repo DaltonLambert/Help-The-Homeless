@@ -2,10 +2,7 @@ package com.dalton.homelessproject.controller;
 
 import com.dalton.homelessproject.dao.JdbcShelterDao;
 import com.dalton.homelessproject.model.Shelter;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +20,10 @@ public class ShelterController {
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<Shelter> getAllShelters(){
        return shelterDao.getAllShelters();
+    }
+
+    @RequestMapping(path = "/name/{shelterName}", method = RequestMethod.GET)
+    public Shelter getShelterByName(@PathVariable String shelterName){
+        return shelterDao.getShelterByName(shelterName);
     }
 }

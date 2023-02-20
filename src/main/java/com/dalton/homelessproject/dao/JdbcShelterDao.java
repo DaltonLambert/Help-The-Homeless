@@ -29,6 +29,18 @@ public class JdbcShelterDao implements ShelterDao{
         return shelters;
     }
 
+    @Override
+    public Shelter getShelterByName(String shelterName) {
+        String sqlShelterByName = "SELECT * FROM shelters WHERE name = ?";
+        SqlRowSet shelterByNameResults = jdbcTemplate.queryForRowSet(sqlShelterByName, shelterName);
+        if (shelterByNameResults.next()){
+            return mapRowToShelter(shelterByNameResults);
+        } else {
+            return null;
+        }
+    }
+
+
     public Shelter mapRowToShelter(SqlRowSet rowSet){
         Shelter shelter = new Shelter();
         shelter.setShelterId(rowSet.getInt("id"));

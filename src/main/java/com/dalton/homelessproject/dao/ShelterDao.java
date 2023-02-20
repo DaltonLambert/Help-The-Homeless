@@ -8,4 +8,6 @@ public interface ShelterDao {
 
     List<Shelter> getAllShelters();
 
+    Shelter getShelterByName(String shelterName);
+
 }
