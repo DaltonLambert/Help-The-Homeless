@@ -4,14 +4,14 @@ public class Shelter {
     private int shelterId;
     private String shelterName;
     private String shelterAddress;
-    private String shelterCapacity;
+    private int shelterCapacity;
     private String shelterPhone;
     private String shelterEmail;
 
     public Shelter() {
 
     }
-    public Shelter(int shelterId, String shelterName, String shelterAddress, String shelterCapacity, String shelterPhone, String shelterEmail) {
+    public Shelter(int shelterId, String shelterName, String shelterAddress, int shelterCapacity, String shelterPhone, String shelterEmail) {
         this.shelterId = shelterId;
         this.shelterName = shelterName;
         this.shelterAddress = shelterAddress;
@@ -43,11 +43,11 @@ public class Shelter {
         this.shelterAddress = shelterAddress;
     }
 
-    public String getShelterCapacity() {
+    public int getShelterCapacity() {
         return shelterCapacity;
     }
 
-    public void setShelterCapacity(String shelterCapacity) {
+    public void setShelterCapacity(int shelterCapacity) {
         this.shelterCapacity = shelterCapacity;
     }
 
