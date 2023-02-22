@@ -1,7 +1,35 @@
 .homepage-container {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  height: 150px ;
+  margin-left: ;
+  
 }
