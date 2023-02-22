@@ -1,0 +1,107 @@
+.homepage-container {
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+}
+/* HEADER CSS */
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  grid-column: 1 / span 3;
+}
+
+h1.header-title {
+  grid-column: 2;
+  font-size: 35px;
+}
+
+header nav {
+  grid-column: 3;
+}
+
+header img.relief-img{
+  grid-column: 1;
+  grid-row: 1;
+  position: absolute;
+  height: 70px;
+  opacity: 75%;
+  right: 31cm;
+  
+}
+
+.header-tabs li {
+  display: inline-block;
+}
+
+.tab-button {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px 20px;
+  font-size: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tab-button.active {
+  background-color: #ccc;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+/* MAIN CSS */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   grid-row: 2;
+  grid-column: 2; /* centered in the middle column */
+}
+/* FOOTER CSS */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  grid-row: 3;
+  grid-column: 1 / span 3; /* spans all three columns */
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+  header {
+    flex-direction: column;
+    order: 1;
+  }
+  
+  main {
+    order: 2;
+  }
+  
+  footer {
+    order: 3;
+  }
+}
