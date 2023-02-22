@@ -5,6 +5,7 @@
 }
 
 header {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -28,8 +29,51 @@ footer {
   color: white;
 }
 
-.logo {
-  height: 150px ;
-  margin-left: ;
+.tab-button {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 35px;
+  cursor: pointer;
+  margin-right: 10px;
   
+}
+
+.tab-button.active {
+  background-color: #ccc;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+
+.header-tabs li {
+  display: inline-block;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+  header {
+    flex-direction: column;
+    order: 1;
+  }
+  
+  main {
+    order: 2;
+  }
+  
+  footer {
+    order: 3;
+  }
 }
