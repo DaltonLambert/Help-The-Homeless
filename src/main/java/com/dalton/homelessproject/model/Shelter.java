@@ -4,18 +4,18 @@ public class Shelter {
     private int shelterId;
     private String shelterName;
     private String shelterAddress;
-    private int shelterCapacity;
+    private String shelterWebsite;
     private String shelterPhone;
     private String shelterEmail;
 
     public Shelter() {
 
     }
-    public Shelter(int shelterId, String shelterName, String shelterAddress, int shelterCapacity, String shelterPhone) {
+    public Shelter(int shelterId, String shelterName, String shelterAddress, String shelterWebsite, String shelterPhone) {
         this.shelterId = shelterId;
         this.shelterName = shelterName;
         this.shelterAddress = shelterAddress;
-        this.shelterCapacity = shelterCapacity;
+        this.shelterWebsite = shelterWebsite;
         this.shelterPhone = shelterPhone;
     }
     public int getShelterId() {
@@ -42,12 +42,12 @@ public class Shelter {
         this.shelterAddress = shelterAddress;
     }
 
-    public int getShelterCapacity() {
-        return shelterCapacity;
+    public String getShelterWebsite() {
+        return shelterWebsite;
     }
 
-    public void setShelterCapacity(int shelterCapacity) {
-        this.shelterCapacity = shelterCapacity;
+    public void setShelterWebsite(String shelterWebsite) {
+        this.shelterWebsite = shelterWebsite;
     }
 
     public String getShelterPhone() {
@@ -65,7 +65,7 @@ public class Shelter {
                 "shelterId=" + shelterId +
                 ", shelterName='" + shelterName + '\'' +
                 ", shelterAddress='" + shelterAddress + '\'' +
-                ", shelterCapacity='" + shelterCapacity + '\'' +
+                ", shelterWebsite='" + shelterWebsite + '\'' +
                 ", shelterPhone='" + shelterPhone + '\'' +
                 '}';
     }

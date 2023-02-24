@@ -42,9 +42,9 @@ public class JdbcShelterDao implements ShelterDao{
 
     @Override
     public Shelter createNewShelter(Shelter shelter) {
-        String sqlCreateNewShelter = "INSERT INTO shelters ( name, address, capacity, phone) VALUES (?,?,?,?) returning id";
+        String sqlCreateNewShelter = "INSERT INTO shelters ( name, address, website, phone) VALUES (?,?,?,?) returning id";
         int newShelterId = jdbcTemplate.queryForObject(sqlCreateNewShelter, int.class, shelter.getShelterName(),
-                shelter.getShelterAddress(), shelter.getShelterCapacity(), shelter.getShelterPhone());
+                shelter.getShelterAddress(), shelter.getShelterWebsite(), shelter.getShelterPhone());
         shelter.setShelterId(newShelterId);
         return shelter;
     }
@@ -55,7 +55,7 @@ public class JdbcShelterDao implements ShelterDao{
         shelter.setShelterId(rowSet.getInt("id"));
         shelter.setShelterName(rowSet.getString("name"));
         shelter.setShelterAddress(rowSet.getString("address"));
-        shelter.setShelterCapacity(rowSet.getInt("capacity"));
+        shelter.setShelterWebsite(rowSet.getString("website"));
         shelter.setShelterPhone(rowSet.getString("phone"));
         return shelter;
     }
