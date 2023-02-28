@@ -4,6 +4,7 @@ import './CSS/HomePage.css';
 
 function HomePage() {
   const [shelters, setShelters] = useState([]);
+  const [resources, setResources] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8080/shelter')
@@ -12,6 +13,14 @@ function HomePage() {
         console.log(data); // Debug output
         setShelters(data);
       });
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/resource')
+    .then(response => response.json())
+    .then(data => {
+      setResources(data);
+    });
   }, []);
   return (
     <div className='homepage-container'>
@@ -53,6 +62,29 @@ function HomePage() {
         <td><a href={shelter.shelterWebsite} target="_blank" rel="noreferrer noopener">{shelter.shelterWebsite}</a></td>
 
         <td>{shelter.shelterPhone}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+</div>
+        <div className='resources'>
+      <h3 className='shelters-header'>Resources</h3>
+      <table>
+  <thead>
+    <tr>
+      <th>Resource Name</th>
+      <th>Address</th>
+      <th>Website</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {resources.map(resource => (
+      <tr key={resource.healthId}>
+        <td>{resource.healthName}</td>
+        <td>{resource.healthAddress}</td>
+        <td><a href={resource.healthWebsite} target="_blank" rel="noreferrer noopener">{resource.healthWebsite}</a></td>
+        <td>{resource.healthPhone}</td>
       </tr>
     ))}
   </tbody>

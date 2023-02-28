@@ -81,6 +81,18 @@ main {
   
 }
 
+.resources {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-row: 2;
+  grid-column: 3; 
+  padding-right: 25px;
+  overflow: auto;
+  
+}
+
 
 table {
   border-collapse: collapse;
