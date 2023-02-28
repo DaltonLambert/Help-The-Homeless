@@ -6,7 +6,7 @@ public class Shelter {
     private String shelterAddress;
     private String shelterWebsite;
     private String shelterPhone;
-    private String shelterEmail;
+
 
     public Shelter() {
 

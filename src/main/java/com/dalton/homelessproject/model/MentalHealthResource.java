@@ -6,18 +6,17 @@ public class MentalHealthResource {
     private String healthAddress;
     private String healthWebsite;
     private String healthPhone;
-    private String healthDescription;
+
 
     public MentalHealthResource(){
 
     }
-    public MentalHealthResource(int healthId, String healthName, String healthAddress, String healthWebsite, String healthPhone, String healthDescription) {
+    public MentalHealthResource(int healthId, String healthName, String healthAddress, String healthWebsite, String healthPhone) {
         this.healthId = healthId;
         this.healthName = healthName;
         this.healthAddress = healthAddress;
         this.healthWebsite = healthWebsite;
         this.healthPhone = healthPhone;
-        this.healthDescription = healthDescription;
     }
 
     public int getHealthId() {
@@ -60,14 +59,6 @@ public class MentalHealthResource {
         this.healthPhone = healthPhone;
     }
 
-    public String getHealthDescription() {
-        return healthDescription;
-    }
-
-    public void setHealthDescription(String healthDescription) {
-        this.healthDescription = healthDescription;
-    }
-
     @Override
     public String toString() {
         return "MentalHealthResource{" +
@@ -76,7 +67,6 @@ public class MentalHealthResource {
                 ", healthAddress='" + healthAddress + '\'' +
                 ", healthWebsite='" + healthWebsite + '\'' +
                 ", healthPhone='" + healthPhone + '\'' +
-                ", healthDescription='" + healthDescription + '\'' +
                 '}';
     }
 

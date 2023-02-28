@@ -33,7 +33,6 @@ function HomePage() {
         <p>
           This is a tool to help connect people experiencing homelessness with resources such as shelters, job training, and mental health services.
         </p>
-       
       </main>
       <div className='shelters'>
       <h3 className='shelters-header'>SHELTERS</h3>
